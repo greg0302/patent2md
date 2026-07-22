@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Patent Markdown Exporter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- Top bar: extension title + gear icon that opens the settings panel -->
+  <header class="topbar">
+    <h1>Patent Markdown Exporter</h1>
+    <button id="settingsBtn" class="icon-btn" title="Settings" aria-label="Open settings">⚙️</button>
+  </header>
+
+  <!-- Main view: checkboxes + action buttons + status line -->
+  <main id="mainView">
+
+    <fieldset class="sections">
+      <legend>Sections to include</legend>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="includeMetadata" checked />
+        Metadata
+      </label>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="includeAbstract" checked />
+        Abstract
+      </label>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="includeDescription" checked />
+        Description
+      </label>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="includeClaims" checked />
+        Claims
+      </label>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="includeReferences" />
+        References
+      </label>
+    </fieldset>
+
+    <div class="actions">
+      <button id="extractBtn" class="primary-btn">Extract &amp; Download</button>
+      <button id="copyBtn" class="secondary-btn">Copy Markdown</button>
+    </div>
+
+    <p id="status" class="status" aria-live="polite"></p>
+  </main>
+
+  <!-- Settings panel: hidden until the gear icon is clicked -->
+  <section id="settingsView" class="settings-view hidden">
+    <h2>Settings</h2>
+
+    <label class="checkbox-row">
+      <input type="checkbox" id="rememberSelections" checked />
+      Remember my section selections
+    </label>
+
+    <label class="checkbox-row">
+      <input type="checkbox" id="askWhereToSave" />
+      Ask where to save each time
+    </label>
+
+    <button id="closeSettingsBtn" class="secondary-btn">Back</button>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

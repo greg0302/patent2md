@@ -1,0 +1,163 @@
+/* Basic sizing: Chrome popups don't scroll their width, so we fix one. */
+body {
+  width: 300px;
+  margin: 0;
+  padding: 12px;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  color: #202124;
+  background: #fff;
+}
+
+/* --- Top bar --- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.topbar h1 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.icon-btn:hover {
+  background: #f1f3f4;
+}
+
+/* --- Section checkboxes --- */
+.sections {
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  padding: 8px 10px 10px;
+  margin: 0 0 12px;
+}
+
+.sections legend {
+  font-size: 12px;
+  color: #5f6368;
+  padding: 0 4px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  cursor: pointer;
+}
+
+/* --- Action buttons --- */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #1765cc;
+}
+
+.secondary-btn {
+  background: #fff;
+  color: #1a73e8;
+  border-color: #dadce0;
+}
+
+.secondary-btn:hover {
+  background: #f1f3f4;
+}
+
+/* --- Status line --- */
+.status {
+  min-height: 16px;
+  font-size: 12px;
+  color: #5f6368;
+  margin: 0;
+}
+
+/* --- Settings panel --- */
+.settings-view h2 {
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Dark mode ---
+   Follows the browser/OS theme automatically via prefers-color-scheme —
+   no manual toggle, no setting to maintain. Same layout, just swapped
+   colors. */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #202124;
+    color: #e8eaed;
+  }
+
+  .icon-btn:hover {
+    background: #3c4043;
+  }
+
+  .sections {
+    border-color: #5f6368;
+  }
+
+  .sections legend {
+    color: #9aa0a6;
+  }
+
+  .primary-btn {
+    background: #8ab4f8;
+    color: #202124;
+  }
+
+  .primary-btn:hover {
+    background: #aecbfa;
+  }
+
+  .secondary-btn {
+    background: transparent;
+    color: #8ab4f8;
+    border-color: #5f6368;
+  }
+
+  .secondary-btn:hover {
+    background: #3c4043;
+  }
+
+  .status {
+    color: #9aa0a6;
+  }
+}
