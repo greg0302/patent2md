@@ -19,7 +19,7 @@ English) patent pages.
 - Toggle any section on/off per export — your last selection is
   remembered for next time.
 - **Extract & Download** saves a `.md` file named after the patent's
-  publication number (e.g. `US10123456B2.md`).
+  publication number (e.g. `US5443036A.md`).
 - **Copy Markdown** copies the same output straight to your clipboard.
 - Settings panel: choose silent auto-save to your Downloads folder, or a
   native Save As dialog every time.
@@ -44,7 +44,7 @@ This extension isn't on the Chrome Web Store — load it manually:
    Claims, References).
 4. Click **Extract & Download** to save a `.md` file, or **Copy Markdown**
    to copy the text to your clipboard instead.
-5. The status line confirms what happened, e.g. `Extracted US10123456B2 ✓`.
+5. The status line confirms what happened, e.g. `Extracted US5443036A ✓`.
 
 ### Settings
 
@@ -56,6 +56,70 @@ Click the gear icon to open settings:
   selection instead.
 - **Ask where to save each time** — off by default (silent save to
   Downloads). Turn it on to get a native Save As dialog on every export.
+
+## Example output
+
+Extracting [US5443036A](https://patents.google.com/patent/US5443036A/en) —
+yes, this is a real patent — produces:
+
+````markdown
+---
+title: "Method of exercising a cat"
+publication_number: "US5443036A"
+url: "https://patents.google.com/patent/US5443036A/en"
+inventors: ["Kevin T. Amiss","Martin H. Abbott"]
+assignee: "Individual"
+publication_date: "1995-08-22"
+filing_date: "1993-11-02"
+priority_date: "1993-11-02"
+---
+
+# Method of exercising a cat
+
+## Metadata
+
+- **Publication number:** US5443036A
+- **URL:** https://patents.google.com/patent/US5443036A/en
+- **Inventors:** Kevin T. Amiss, Martin H. Abbott
+- **Assignee:** Individual
+- **Publication date:** 1995-08-22
+- **Filing date:** 1993-11-02
+- **Priority date:** 1993-11-02
+
+## Abstract
+
+A method for inducing cats to exercise consists of directing a beam of
+invisible light produced by a hand-held laser apparatus onto the floor or
+wall or other opaque surface in the vicinity of the cat, then moving the
+laser so as to cause the bright pattern of light to move in an irregular
+way fascinating to cats, and to any other animal with a chase instinct.
+
+## Description
+
+Technical Field
+
+The present invention relates to recreational and amusement devices for
+domestic animals and, more particularly, to a method for exercising and
+entertaining cats.
+
+*(...17 more paragraphs...)*
+
+## Claims
+
+1. A method of inducing aerobic exercise in an unrestrained cat
+comprising the steps of: (a) directing an intense coherent beam of
+invisible light produced by a hand-held laser apparatus to produce a
+bright highly-focused pattern of light at the intersection of the beam
+and an opaque surface, said pattern being of visual interest to a cat;
+and (b) selectively redirecting said beam out of the cat's immediate
+reach to induce said cat to run and chase said beam and pattern of light
+around an exercise area.
+
+2. The method of claim 1 wherein said bright pattern of light is small
+in area relative to a paw of the cat.
+
+*(...2 more claims...)*
+````
 
 ## How it works (for the curious)
 
